@@ -1,0 +1,35 @@
+#pragma warning(disable : 4996)
+#include<stdio.h>
+
+void main()
+{
+	/*
+	1.
+	printf("HelloC++");
+	printf("HelloC++\n");
+	// 여러줄 주석
+
+	puts("안녕하세요");
+	// puts("안녕하세요\n");
+	*/
+
+	2.
+	int a, b, sum;
+	long int l = 100000;
+	float f = 3.14f;
+	char ch = 'A';
+	char name[10] = "홍길동";
+	a = 10;
+	b = 20;
+	sum = a + b;
+
+	printf("sumg = %d\n", sum);
+	printf("%d + %d = %d\n", a, b, sum);
+	printf("l = %ld\n", l);
+	printf("f = %f\n", f);
+	printf("ch = %d\n", ch);
+
+	printf("내 이름은 %s입니다.", name);
+	printf("HelloC++");
+
+}
