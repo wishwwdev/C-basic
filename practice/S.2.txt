@@ -1,0 +1,17 @@
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>// getch();
+
+void main()
+{
+	1.
+	char title[20], writer[10], date[15];
+
+	printf("주제 : "); gets_s(title);
+	printf("작성자 : "); gets_s(writer);
+	printf("작성일 : "); gets_s(date);
+
+	printf("오늘의 주제 : "); puts(title); 
+	printf("프로그램 작성자 : "); puts(writer); 
+	printf("프로그램 작성일 : "); puts(date);
+}

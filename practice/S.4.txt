@@ -1,0 +1,12 @@
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>// getch();
+
+void main()
+{
+	3.
+	float pi;
+
+	printf("값을 입력하세요 : "); scanf("%f", &pi); getchar();
+	printf("입력 값 : %1.0f", pi);
+}

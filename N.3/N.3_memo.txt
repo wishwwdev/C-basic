@@ -1,0 +1,24 @@
+- NameAgeBlood
+
+getchar()
+: age에서 enter했을때 booldType에 ‘enter’값이 들어가는 것을 막기위해, ‘enter’값을 받아주는 함수(무시함)
+goto RE
+: 무조건 분기문 / 라벨(사용자정의, 일반적으로 변수와 구분하기 위해 대문자로 지정함)
+
+
+- getchar
+
+## getchar()
+
+💡 C에서는 입력창에서의 ‘Enter’(char)도 생각해야됨.
+	입력창에서의 Enter도 char타입으로 값이 넘어감.
+
+- name에서 Enter값(char)이 age변수에 들어가야되지만, age변수의 타입이 정수(int)이기 때문에 타입이 안맞아서 안들어감.
+- but, age값을 입력하고 Enter했을 때는 ‘Enter’(char)값이 바로 char타입인 bloodTyper변수에 들어감.
+
+printf()는 기본적으로 문자열을 출력하기 때문에 “ ”를 씀.
+
+putchar()는 문자만(한 글자) 출력하기 때문에 ‘ ’를 씀
+
+getch()
+: 코드를 단계별로 확인할 수 있기함

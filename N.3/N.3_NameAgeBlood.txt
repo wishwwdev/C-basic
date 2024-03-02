@@ -1,0 +1,26 @@
+#pragma warning(disable : 4996)
+#include<stdio.h>
+
+void main()
+{
+	char name[10], bloodType;
+	int age;
+	
+RE:
+
+	printf("이름 입력 : "); scanf("%s", name);
+	printf("나이 입력 : "); scanf("%d", &age); getchar();
+	printf("혈액형 입력 : "); scanf("%c", &bloodType); getchar(); // == blood = getchar(); getchar();
+	
+	printf("내 이름은 %s이고, 나이는 %d살이며, 혈액형은 %c입니다!\n", name, age, bloodType);
+
+	printf("게속하시겠습니까?(Y/N) -> ");
+
+	ch = getchar();
+
+	if (ch == 'Y' || ch == 'y')
+		goto RE;
+	else
+		return;
+
+}

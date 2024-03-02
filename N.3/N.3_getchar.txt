@@ -1,0 +1,29 @@
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h> // getch();
+
+void main()
+{
+	char ch;
+	printf("한 문자 입력 : ");
+	ch = getchar(); // == scanf("%c", ch);
+
+	putchar(ch); // == printf("%c", ch);
+	printf("\n");
+	getch();
+
+	putchar('A');
+	putchar('\n'); // printf("\n");
+	getch();
+
+	putchar(65);
+	putchar('\n');
+	getch();
+
+	putchar('A' + 1); // printf("%c", 'A' + 1)
+	putchar('\n');
+	getch();
+
+	putchar(65 + 1);
+	putchar('\n');
+}
