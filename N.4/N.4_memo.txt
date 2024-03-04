@@ -1,4 +1,4 @@
-▼ 연산자
+▼ Operators
 2.
 if문 조건식안에 0 → false, 그외의 숫자는 모두 → true를 나타나냄
 

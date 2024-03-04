@@ -1,0 +1,20 @@
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>// getch();
+
+void main
+{
+
+	// If문 vs Switch문
+	int a = 2;
+
+	switch (a) // 선택자
+	{
+		case 1: puts("1 = *"); break; // 1 -> 라벨
+		case 2 : puts("2 = *"); break;
+
+		case 3 : puts("3 = *"); break;
+		case 4 : puts("4 = *"); break;
+		default: puts("1 ~ 4사이의 정수만 입력!\a\a");
+	}
+}

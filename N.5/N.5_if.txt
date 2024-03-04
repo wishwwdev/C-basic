@@ -1,0 +1,54 @@
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>// getch();
+
+void main
+{
+
+1.
+	/*
+	int a = 2, b = 1;
+
+	// 1.
+	if (a < b)
+		a++;
+
+	// 2.
+	if (a >= b)
+		a++;
+	else
+		b++;
+
+	// 3.
+	if (a != b)
+	{
+		a++;
+		b++;
+	}
+
+	// 4.
+	if (a == b)
+	{
+		a++;
+		b++;
+	}
+	else
+	{
+		a++;
+		b++;
+	}
+	*/
+
+2.
+	/* 
+	int a = 0;
+
+	if (a > 0)
+		puts("양수!");
+	else if (a < 0)
+		puts("음수!");
+	else
+		puts("제로!");
+	*/
+
+}

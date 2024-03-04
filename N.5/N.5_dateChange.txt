@@ -1,0 +1,28 @@
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>// getch();
+
+void main
+{
+	/*
+	int a = 123;
+	double b = 123.45;
+
+	printf("%d\n", sizeof(char));
+	printf("%d\n", sizeof(float));
+	printf("%d\n", sizeof(a));
+	printf("%d\n", sizeof(b));
+	printf("%d\n", sizeof("MBC"));
+	printf("%d\n", sizeof(a * 10));
+	printf("%d\n", sizeof(a + b));
+	*/
+	
+	int tot = 100;
+	float avg;
+
+	// avg = tot / 3; >> 33
+	avg = tot / 3.0; // == avg = (double) tot / 3;  >> 33.333333
+
+	printf("avg = %d\n", avg);
+
+}

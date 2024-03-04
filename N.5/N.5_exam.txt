@@ -1,0 +1,96 @@
+exam1
+한 정수를 입력받아 홀·짝수 판별
+	
+	입) 한 정수 입력 : 10
+	출) 10은 짝수!
+
+exam1
+한 문자를 입력받아 대·소문자 판펼
+	입) 한 문자 입력 : A
+	출) A는 대문자! A의 아스키 코드는 65!
+	입) 한 문자 입력 : b
+	출) b는 소문자! b의 아스키 코드는 98!
+
+exam3
+사계절 찾기
+※	1 -> 봄
+  	2 -> 여름
+	3 -> 가을
+	4 -> 겨울
+
+	입) 한 정수 입력 : 2
+	출) 2번은 여름!
+
+exam4
+홀·짝수 판별(switch)
+	입) 한 정수 입력 : 10
+	출) 10은 짝수!
+
+---------------------------------------------------------------------------
+
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>// getch();
+
+void main
+{
+	/*
+	// exam1
+	int a, result;
+
+	printf("한 정수 입력 : "); scanf("%d", &a);
+
+	result = a % 2;
+
+	if (result)
+		printf("%d은 홀수!\n", a);
+	else
+		printf("%d은 짝수!\n", a);
+	*/
+
+	/*
+	// exam2
+	char ch;
+	int result;
+
+	printf("한 문자 입력 : "); scanf("%c", &ch);
+
+	result = ch / 'a'; // 알아서 아스크코드로 바꿔주기때문에 굳이 숫자로 적을 필요없음
+
+	if (result)
+		printf("%c는 소문자! %c의 아스키코드는 %d!\n", ch, ch, ch);
+	else 
+		printf("%c는 대문자! %c의 아스키코드는 %d!\n", ch, ch, ch);
+	*/
+	
+	/*
+	// exam3
+	int a;
+
+	printf("한 정수 입력 : "); scanf("%d", &a);
+
+	switch (a)
+	{
+		case 1: printf("%d번은 봄!\n", a); break;
+		case 2: printf("%d번은 여름!\n", a); break;
+		case 3: printf("%d번은 가을!\n", a); break;
+		case 4: printf("%d번은 겨울!\n", a); break;
+	}
+	*/
+
+	/*
+	// exam4
+	int a, result;
+
+	printf("한 정수 입력 : "); scanf("%d", &a);
+
+	result = a % 2;
+
+	switch (result)
+	{
+		case 0: printf("%d은 짝수!\n", a); break;
+		default: printf("%d은 홀수!\n", a);
+	}
+	*/
+
+}

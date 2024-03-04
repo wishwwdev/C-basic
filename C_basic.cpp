@@ -181,7 +181,150 @@ RE:
 	printf("d = %d\n", d);
 	printf("e = %d\n", e);
 	*/
-
 	
+	/*
+	int a = 123;
+	double b = 123.45;
 
+	printf("%d\n", sizeof(char));
+	printf("%d\n", sizeof(float));
+	printf("%d\n", sizeof(a));
+	printf("%d\n", sizeof(b));
+	printf("%d\n", sizeof("MBC"));
+	printf("%d\n", sizeof(a * 10));
+	printf("%d\n", sizeof(a + b));
+	*/
+	
+	/*
+	int tot = 100;
+	float avg;
+
+	// avg = tot / 3; >> 33
+	avg = tot / 3.0; // == avg = (double) tot / 3;  >> 33.333333
+
+	printf("avg = %d\n", avg);
+	*/
+
+	/*
+	//
+	int a = 2, b = 1;
+
+	// 1.
+	if (a < b)
+		a++;
+
+	// 2.
+	if (a >= b)
+		a++;
+	else
+		b++;
+
+	// 3.
+	if (a != b)
+	{
+		a++;
+		b++;
+	}
+
+	// 4.
+	if (a == b)
+	{
+		a++;
+		b++;
+	}
+	else
+	{
+		a++;
+		b++;
+	}
+	/*
+
+	/* 
+	//
+	int a = 0;
+
+	if (a > 0)
+		puts("양수!");
+	else if (a < 0)
+		puts("음수!");
+	else
+		puts("제로!");
+	*/
+
+	/*
+	// exam1
+	int a, result;
+
+	printf("한 정수 입력 : "); scanf("%d", &a);
+
+	result = a % 2;
+
+	if (result)
+		printf("%d은 홀수!\n", a);
+	else
+		printf("%d은 짝수!\n", a);
+	*/
+
+	/*
+	// exam2
+	char ch;
+	int result;
+
+	printf("한 문자 입력 : "); scanf("%c", &ch);
+
+	result = ch / 'a'; // 알아서 아스크코드로 바꿔주기때문에 굳이 숫자로 적을 필요없음
+
+	if (result)
+		printf("%c는 소문자! %c의 아스키코드는 %d!\n", ch, ch, ch);
+	else 
+		printf("%c는 대문자! %c의 아스키코드는 %d!\n", ch, ch, ch);
+	*/
+	
+	/*
+	// If문 vs Switch문
+	int a = 2;
+
+	switch (a) // 선택자
+	{
+		case 1: puts("1 = *"); break; // 1 -> 라벨
+		case 2: puts("2 = *"); break;
+
+		case 3: puts("3 = *"); break;
+		case 4: puts("4 = *"); break;
+		default: puts("1 ~ 4사이의 정수만 입력!\a\a");
+	}
+	*/
+
+	/*
+	// exam3
+	int a;
+
+	printf("한 정수 입력 : "); scanf("%d", &a);
+
+	switch (a)
+	{
+		case 1: printf("%d번은 봄!\n", a); break;
+		case 2: printf("%d번은 여름!\n", a); break;
+		case 3: printf("%d번은 가을!\n", a); break;
+		case 4: printf("%d번은 겨울!\n", a); break;
+	}
+	*/
+	
+	/*
+	// exam4
+	int a, result;
+
+	printf("한 정수 입력 : "); scanf("%d", &a);
+
+	result = a % 2;
+
+	switch (result)
+	{
+		case 0: printf("%d은 짝수!\n", a); break;
+		default: printf("%d은 홀수!\n", a);
+	}
+	*/
+	
+	
+	
 }
