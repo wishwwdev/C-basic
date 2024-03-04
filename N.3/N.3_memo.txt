@@ -1,4 +1,4 @@
-- NameAgeBlood
+▼ NameAgeBlood
 
 getchar()
 : age에서 enter했을때 booldType에 ‘enter’값이 들어가는 것을 막기위해, ‘enter’값을 받아주는 함수(무시함)
@@ -6,7 +6,7 @@ goto RE
 : 무조건 분기문 / 라벨(사용자정의, 일반적으로 변수와 구분하기 위해 대문자로 지정함)
 
 
-- getchar
+▼ getchar
 
 ## getchar()
 

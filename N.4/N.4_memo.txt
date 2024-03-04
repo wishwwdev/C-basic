@@ -1,0 +1,5 @@
+▼ 연산자
+2.
+if문 조건식안에 0 → false, 그외의 숫자는 모두 → true를 나타나냄
+
+💡 Java에서는 숫자로 true, false불가(Java에서 위 코드를 돌리면 error뜸)

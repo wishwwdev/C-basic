@@ -3,8 +3,8 @@
 
 void main()
 {
+1.
 	/*
-	1.
 	int a, *p;
 	a = 10;
 	p = &a;
@@ -16,8 +16,8 @@ void main()
 	printf("a = %d \t *p = %d\n", a, *p);
 	*/
 
+2.
 	/*
-	2.
 	int a, b;
 	char ch;
 
@@ -28,7 +28,8 @@ void main()
 	printf("입력한 값은 %d, %d, %c입니다.\n", a, b, ch);
 	*/
 	
-	3.
+3.
+	/*
 	char name[10];
 
 	printf("이름을 입력하세요 : ");
@@ -36,4 +37,5 @@ void main()
 	scanf("%s", name);
 
 	printf("내 이름은 %s입니다\n", name);
+	*/
 }

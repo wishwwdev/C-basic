@@ -1,0 +1,41 @@
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>// getch();
+
+void main
+{
+
+1.
+	/*
+	// 제어문자(\n 등)
+	printf("Date Error!\a");
+	puts("Date Error!\a");
+	printf("PSB - TV\b");
+	putchar(65);
+	putchar('\n');
+	printf("%d \t %d\n", 50, 100);
+	printf("%d \t %c\n", 65, 'A');
+	printf("%c \t %d\n", 65, 'A');
+	printf("%d \t %c\n", '\0', '\0');
+	*/
+	
+2.
+	/*
+	// 형식문자 출력 형태 정의하기(%d 등)
+	printf("%d\n", 123);
+	printf("%5d\n", 123);
+	printf("%05d\n", 123);
+	printf("%-5d\n", 123);
+
+	printf("%f\n", 123.45);
+	printf("%6.1f\n", 123.45);
+	printf("% .1f\n", 12.67); // "% .0f" >> 정수자리 수만 나옴
+
+	printf("%3c\n", 'A');
+	printf("%-3c\n", 'A');
+
+	printf("%10s\n", "ABCDEFG");
+	printf("%-10s\n", "ABCDEFG");
+	*/
+
+}

@@ -1,0 +1,22 @@
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>// getch();
+
+void main()
+ {
+	char str1[100], str2[100];
+
+	printf("STR1 : "); gets_s(str1);
+	printf("STR2 : "); scanf("%s", str2);
+
+	printf("STR1 : %s\n", str1);
+	printf("STR2 : %s\n", str2);
+	getch();
+
+	puts(str1);
+	puts(str2);
+	getch();
+
+	puts("오늘은");
+	puts("토요일");
+}
