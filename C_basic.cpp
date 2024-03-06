@@ -310,8 +310,8 @@ RE:
 	}
 	*/
 	
+// exam4
 	/*
-	// exam4
 	int a, result;
 
 	printf("한 정수 입력 : "); scanf("%d", &a);
@@ -324,7 +324,78 @@ RE:
 		default: printf("%d은 홀수!\n", a);
 	}
 	*/
+
+// N.6
+// for문
+	/*
+	char ch;
+
+	for (ch = 'A'; ch <= 'Z'; ch + 1)
+		printf("%3c", ch);
+		printf("\n");
+
+	// >> AAAAAA ··· 무한루프임
+	*/
 	
+// exam1
+	/*
+	int i, sum = 0;
+
+	for (i = 1; i < 101; i++)
+		sum += i;
+
+	printf("1 ~ 100합 : %d", sum);
+	*/
+
+	/*
+	int i, j, c1 = 0, c2 = 0, c3 = 0;
+
+	for (i = 1; i <= 3; i++)			// 고정, 외부 for문
+	{
+		c1++;
+		for (j = 1; j <= 5; j++)		// 반복, 내부 for문
+			{
+				c2++;
+				c3++;
+			}
+	}
+
+	printf("%d %d %d\n", c1, c2, c3);
+	*/
+	
+// practice1
+	/*
+	int a, b, result;
+
+	for (a = 2; a <= 9; a++)
+	{
+		for (b = 1; b <= 9; b++)
+		{
+			result = a * b;
+			printf("%2d x %d = %-2d", a, b, result);
+		}
+		printf("\n");
+	}
+	*/
+
+// practice2
+	/*
+	int a, b, result;
+
+	for (b = 1; b <= 9; b++)
+	{
+		for (a = 2; a <= 9; a++)
+		{
+			result = a * b;
+			printf("%2d x %d = %-2d", a, b, result);
+		}
+		printf("\n");
+	}
+	*/
+	
+
+	
+
 	
 	
 }
