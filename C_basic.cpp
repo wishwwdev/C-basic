@@ -1,4 +1,4 @@
-#pragma warning(disable : 4996)
+ï»¿#pragma warning(disable : 4996)
 #include<stdio.h>
 #include<conio.h>// getch();
 
@@ -7,10 +7,10 @@ void main()
 	/*
 	printf("HelloC++");
 	printf("HelloC++\n");
-	// ¿©·¯ÁÙ ÁÖ¼®
+	// ì—¬ëŸ¬ì¤„ ì£¼ì„
 
-	puts("¾È³çÇÏ¼¼¿ä");
-	// puts("¾È³çÇÏ¼¼¿ä\n");
+	puts("ì•ˆë…•í•˜ì„¸ìš”");
+	// puts("ì•ˆë…•í•˜ì„¸ìš”\n");
 	*/
 
 	/*
@@ -29,21 +29,21 @@ void main()
 	int a, b;
 	char ch;
 
-	printf("µÎ Á¤¼ö¿Í ÇÑ ¹®ÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ë‘ ì •ìˆ˜ì™€ í•œ ë¬¸ìžë¥¼ ìž…ë ¥í•˜ì„¸ìš” : ");
 
 	scanf("%d %d %c", &a, &b, &ch);
 
-	printf("ÀÔ·ÂÇÑ °ªÀº %d, %d, %cÀÔ´Ï´Ù.\n", a, b, ch);
+	printf("ìž…ë ¥í•œ ê°’ì€ %d, %d, %cìž…ë‹ˆë‹¤.\n", a, b, ch);
 	*/
 
 	/*
 	char name[10];
 
-	printf("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ì´ë¦„ì„ ìž…ë ¥í•˜ì„¸ìš” : ");
 
 	scanf("%s", name);
 
-	printf("³» ÀÌ¸§Àº %sÀÔ´Ï´Ù\n", name);
+	printf("ë‚´ ì´ë¦„ì€ %sìž…ë‹ˆë‹¤\n", name);
 	*/
 
 	/*
@@ -52,13 +52,13 @@ void main()
 
 RE:
 
-	printf("ÀÌ¸§ ÀÔ·Â : "); scanf("%s", name);
-	printf("³ªÀÌ ÀÔ·Â : "); scanf("%d", &age); getchar();
-	printf("Ç÷¾×Çü ÀÔ·Â : "); scanf("%c", &bloodType); getchar();¿Í °°À½ // == blood = getchar(); getchar();
+	printf("ì´ë¦„ ìž…ë ¥ : "); scanf("%s", name);
+	printf("ë‚˜ì´ ìž…ë ¥ : "); scanf("%d", &age); getchar();
+	printf("í˜ˆì•¡í˜• ìž…ë ¥ : "); scanf("%c", &bloodType); getchar();ì™€ ê°™ìŒ // == blood = getchar(); getchar();
 
-	printf("³» ÀÌ¸§Àº %sÀÌ°í, ³ªÀÌ´Â %d»ìÀÌ¸ç, Ç÷¾×ÇüÀº %cÀÔ´Ï´Ù!\n", name, age, bloodType);
+	printf("ë‚´ ì´ë¦„ì€ %sì´ê³ , ë‚˜ì´ëŠ” %dì‚´ì´ë©°, í˜ˆì•¡í˜•ì€ %cìž…ë‹ˆë‹¤!\n", name, age, bloodType);
 
-	printf("°Ô¼ÓÇÏ½Ã°Ú½À´Ï±î?(Y/N) -> ");
+	printf("ê²Œì†í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(Y/N) -> ");
 
 	ch = getchar();
 
@@ -70,7 +70,7 @@ RE:
 
 	/*
 	char ch;
-	printf("ÇÑ ¹®ÀÚ ÀÔ·Â : ");
+	printf("í•œ ë¬¸ìž ìž…ë ¥ : ");
 	ch = getchar(); // == scanf("%c", ch);
 
 	putchar(ch); // == printf("%c", ch);
@@ -107,12 +107,12 @@ RE:
 	puts(str2);
 	getch();
 
-	puts("¿À´ÃÀº");
-	puts("Åä¿äÀÏ");
+	puts("ì˜¤ëŠ˜ì€");
+	puts("í† ìš”ì¼");
 	*/
 
 	/*
-	// Á¦¾î¹®ÀÚ(\n µî)
+	// ì œì–´ë¬¸ìž(\n ë“±)
 	printf("Date Error!\a");
 	puts("Date Error!\a");
 	printf("PSB - TV\b");
@@ -125,7 +125,7 @@ RE:
 	*/
 	
 	/*
-	// Çü½Ä¹®ÀÚ Ãâ·Â ÇüÅÂ Á¤ÀÇÇÏ±â(%d µî)
+	// í˜•ì‹ë¬¸ìž ì¶œë ¥ í˜•íƒœ ì •ì˜í•˜ê¸°(%d ë“±)
 	printf("%d\n", 123);
 	printf("%5d\n", 123);
 	printf("%05d\n", 123);
@@ -133,7 +133,7 @@ RE:
 
 	printf("%f\n", 123.45);
 	printf("%6.1f\n", 123.45);
-	printf("% .1f\n", 12.67); // "% .0f" >> Á¤¼öÀÚ¸® ¼ö¸¸ ³ª¿È
+	printf("% .1f\n", 12.67); // "% .0f" >> ì •ìˆ˜ìžë¦¬ ìˆ˜ë§Œ ë‚˜ì˜´
 
 	printf("%3c\n", 'A');
 	printf("%-3c\n", 'A');
@@ -143,10 +143,10 @@ RE:
 	*/
 
 	/*
-	// ¿¬»êÀÚ
+	// ì—°ì‚°ìž
 	int a = 2, b = 2;
-	++a; // ÀüÄ¡(ÀüÀ§) ¿¬»êÀÚ
-	b++; // ÈÄÄ¡(ÈÄÀ§) ¿¬»êÀÚ
+	++a; // ì „ì¹˜(ì „ìœ„) ì—°ì‚°ìž
+	b++; // í›„ì¹˜(í›„ìœ„) ì—°ì‚°ìž
 	printf("%d %d\n", a, b);
 	
 	int a = 2, b = 2, c = -2, i, j, k;
@@ -174,7 +174,7 @@ RE:
 	int a = 3, b, c, d, e;
 
 	e = (b = a + 3), c = b * 2, d = c - 2;
-	// d = c - 2, c = b * 2, e = (b = a + 3); >> b = 6, c = ¾²·¹±â°ª, d = ¾²·¹±â°ª, e = 6 
+	// d = c - 2, c = b * 2, e = (b = a + 3); >> b = 6, c = ì“°ë ˆê¸°ê°’, d = ì“°ë ˆê¸°ê°’, e = 6 
 
 	printf("b = %d\n", b);
 	printf("c = %d\n", c);
@@ -244,25 +244,25 @@ RE:
 	int a = 0;
 
 	if (a > 0)
-		puts("¾ç¼ö!");
+		puts("ì–‘ìˆ˜!");
 	else if (a < 0)
-		puts("À½¼ö!");
+		puts("ìŒìˆ˜!");
 	else
-		puts("Á¦·Î!");
+		puts("ì œë¡œ!");
 	*/
 
 	/*
 	// exam1
 	int a, result;
 
-	printf("ÇÑ Á¤¼ö ÀÔ·Â : "); scanf("%d", &a);
+	printf("í•œ ì •ìˆ˜ ìž…ë ¥ : "); scanf("%d", &a);
 
 	result = a % 2;
 
 	if (result)
-		printf("%dÀº È¦¼ö!\n", a);
+		printf("%dì€ í™€ìˆ˜!\n", a);
 	else
-		printf("%dÀº Â¦¼ö!\n", a);
+		printf("%dì€ ì§ìˆ˜!\n", a);
 	*/
 
 	/*
@@ -270,28 +270,28 @@ RE:
 	char ch;
 	int result;
 
-	printf("ÇÑ ¹®ÀÚ ÀÔ·Â : "); scanf("%c", &ch);
+	printf("í•œ ë¬¸ìž ìž…ë ¥ : "); scanf("%c", &ch);
 
-	result = ch / 'a'; // ¾Ë¾Æ¼­ ¾Æ½ºÅ©ÄÚµå·Î ¹Ù²ãÁÖ±â¶§¹®¿¡ ±»ÀÌ ¼ýÀÚ·Î ÀûÀ» ÇÊ¿ä¾øÀ½
+	result = ch / 'a'; // ì•Œì•„ì„œ ì•„ìŠ¤í¬ì½”ë“œë¡œ ë°”ê¿”ì£¼ê¸°ë•Œë¬¸ì— êµ³ì´ ìˆ«ìžë¡œ ì ì„ í•„ìš”ì—†ìŒ
 
 	if (result)
-		printf("%c´Â ¼Ò¹®ÀÚ! %cÀÇ ¾Æ½ºÅ°ÄÚµå´Â %d!\n", ch, ch, ch);
+		printf("%cëŠ” ì†Œë¬¸ìž! %cì˜ ì•„ìŠ¤í‚¤ì½”ë“œëŠ” %d!\n", ch, ch, ch);
 	else 
-		printf("%c´Â ´ë¹®ÀÚ! %cÀÇ ¾Æ½ºÅ°ÄÚµå´Â %d!\n", ch, ch, ch);
+		printf("%cëŠ” ëŒ€ë¬¸ìž! %cì˜ ì•„ìŠ¤í‚¤ì½”ë“œëŠ” %d!\n", ch, ch, ch);
 	*/
 	
 	/*
-	// If¹® vs Switch¹®
+	// Ifë¬¸ vs Switchë¬¸
 	int a = 2;
 
-	switch (a) // ¼±ÅÃÀÚ
+	switch (a) // ì„ íƒìž
 	{
-		case 1: puts("1 = *"); break; // 1 -> ¶óº§
+		case 1: puts("1 = *"); break; // 1 -> ë¼ë²¨
 		case 2: puts("2 = *"); break;
 
 		case 3: puts("3 = *"); break;
 		case 4: puts("4 = *"); break;
-		default: puts("1 ~ 4»çÀÌÀÇ Á¤¼ö¸¸ ÀÔ·Â!\a\a");
+		default: puts("1 ~ 4ì‚¬ì´ì˜ ì •ìˆ˜ë§Œ ìž…ë ¥!\a\a");
 	}
 	*/
 
@@ -299,14 +299,14 @@ RE:
 	// exam3
 	int a;
 
-	printf("ÇÑ Á¤¼ö ÀÔ·Â : "); scanf("%d", &a);
+	printf("í•œ ì •ìˆ˜ ìž…ë ¥ : "); scanf("%d", &a);
 
 	switch (a)
 	{
-		case 1: printf("%d¹øÀº º½!\n", a); break;
-		case 2: printf("%d¹øÀº ¿©¸§!\n", a); break;
-		case 3: printf("%d¹øÀº °¡À»!\n", a); break;
-		case 4: printf("%d¹øÀº °Ü¿ï!\n", a); break;
+		case 1: printf("%dë²ˆì€ ë´„!\n", a); break;
+		case 2: printf("%dë²ˆì€ ì—¬ë¦„!\n", a); break;
+		case 3: printf("%dë²ˆì€ ê°€ì„!\n", a); break;
+		case 4: printf("%dë²ˆì€ ê²¨ìš¸!\n", a); break;
 	}
 	*/
 	
@@ -314,19 +314,19 @@ RE:
 	/*
 	int a, result;
 
-	printf("ÇÑ Á¤¼ö ÀÔ·Â : "); scanf("%d", &a);
+	printf("í•œ ì •ìˆ˜ ìž…ë ¥ : "); scanf("%d", &a);
 
 	result = a % 2;
 
 	switch (result)
 	{
-		case 0: printf("%dÀº Â¦¼ö!\n", a); break;
-		default: printf("%dÀº È¦¼ö!\n", a);
+		case 0: printf("%dì€ ì§ìˆ˜!\n", a); break;
+		default: printf("%dì€ í™€ìˆ˜!\n", a);
 	}
 	*/
 
 // N.6
-// for¹®
+// forë¬¸
 	/*
 	char ch;
 
@@ -334,7 +334,7 @@ RE:
 		printf("%3c", ch);
 		printf("\n");
 
-	// >> AAAAAA ¡¤¡¤¡¤ ¹«ÇÑ·çÇÁÀÓ
+	// >> AAAAAA Â·Â·Â· ë¬´í•œë£¨í”„ìž„
 	*/
 	
 // exam1
@@ -344,16 +344,16 @@ RE:
 	for (i = 1; i < 101; i++)
 		sum += i;
 
-	printf("1 ~ 100ÇÕ : %d", sum);
+	printf("1 ~ 100í•© : %d", sum);
 	*/
 
 	/*
 	int i, j, c1 = 0, c2 = 0, c3 = 0;
 
-	for (i = 1; i <= 3; i++)			// °íÁ¤, ¿ÜºÎ for¹®
+	for (i = 1; i <= 3; i++)			// ê³ ì •, ì™¸ë¶€ forë¬¸
 	{
 		c1++;
-		for (j = 1; j <= 5; j++)		// ¹Ýº¹, ³»ºÎ for¹®
+		for (j = 1; j <= 5; j++)		// ë°˜ë³µ, ë‚´ë¶€ forë¬¸
 			{
 				c2++;
 				c3++;
@@ -392,10 +392,137 @@ RE:
 		printf("\n");
 	}
 	*/
+
+// N.7
+// while1
+	/*
+	char ch = 'A';
+
+	while (ch <= 'Z')
+	{
+		printf("%3c", ch);
+		ch++;
+	}
+	printf("â‚©n");
+	*/
+
+// while2
+	/*
+	char ch='A';
+
+	do
+	}
+		printf("%3c", ch);
+		ch++;
+	} while(ch <= 'Z');
+
+	printf("â‚©n");
+	*/
+
+// while3
+	/*
+	int i=10, j=5;
+
+	while(i <= 5)
+	{
+		printf("i = %dWn", ++i);
+		j++;
+	}
+	printf("j = %dâ‚©n",j);
+	*/
 	
+// while4
+	/*
+	int i=10, j=5;
+
+	do
+	{
+		printf("i = %dâ‚©n", ++i);
+		j++;
+	} while(i <= 5);
+
+	printf("j = %dâ‚©n", j);
+	*/
+	
+// exam1
+	// for
+	/*
+	int i, total = 0;
+
+	for (i = 1; i <= 100; i++)
+		total += i;
+
+	printf("1 ~ 100ê¹Œì§€ì˜ í•© : %d\n", total);
+	*/
+	
+	// while
+	/*
+	int i = 1, total = 0;
+
+	while (int i <= 100)
+	{
+		total += i++;
+	}
+	printf("1 ~ 100ê¹Œì§€ì˜ í•© : %d\n", total);
+	*/
+
+	// do~while
+	/*
+	int i = 1, total = 0;
+	
+	do
+	{
+		total += i++;
+	} while (i <= 100);
+
+	printf("1 ~ 100ê¹Œì§€ì˜ í•© : %d\n", total);
+	*/
+
+// exam2
+	// for
+	/*
+	int a = 0, b = 0;
+
+	for (int i = 1; i <= 100; i++)
+	{
+		int result = i % 2;
+		result ? a += i : b += i;	// 1 - ì‚¼í•­ì—°ì‚°ìž
+		
+		if (result) a += i;			// 2 - ifë¬¸
+		else b += i;
+		
+		
+	}
+	printf("1 ~ 100 ì¤‘ í™€ìˆ˜í•© : %d\n", a);
+	printf("1 ~ 100 ì¤‘ ì§ìˆ˜í•© : %d\n", b);
+	*/
+	
+// exam3
+	// if, switch
+	
+	int num, result;
+
+	printf("í•œ ì •ìˆ˜ ìž…ë ¥ : "); scanf("%d", &num);
+	printf("%dì˜ ì ˆëŒ“ê°’ : ", num);
+
+	switch (num < 0) { case 1: num = -num; }
+
+	printf("%d", num);
+	
+	
+	
+	// ifë¬¸
+	/*
+	int num;
+
+	printf("í•œ ì •ìˆ˜ ìž…ë ¥ : "); scanf("%d", &num);
+
+	if (num < 0) num = -num;		
+	
+	printf("%dì˜ ì ˆëŒ“ê°’ : %d", num, num);
+	*/
 
 	
 
-	
-	
+
 }

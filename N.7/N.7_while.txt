@@ -1,0 +1,55 @@
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>// getch();
+
+void main
+{
+// while1
+	/*
+	char ch = 'A';
+
+	while (ch <= 'Z')
+	{
+		printf("%3c", ch);
+		ch++;
+	}
+	printf("₩n");
+	*/
+
+// while2
+	/*
+	char ch='A';
+
+	do
+	}
+		printf("%3c", ch);
+		ch++;
+	} while(ch <= 'Z');
+	printf("₩n");
+	*/
+
+// while3
+	/*
+	int i=10, j=5;
+
+	while(i <= 5)
+	{
+		printf(" i= %dWn", ++i);
+		j++;
+	}
+	printf("j= %d₩n",j);
+	*/
+	
+// while4
+	/*
+	int i=10, j=5;
+
+	do
+	{
+		printf(" i= %d₩n", ++i);
+		j++;
+	} while(i <= 5);
+
+	printf(" j=%d₩n", j);
+	*/
+}
