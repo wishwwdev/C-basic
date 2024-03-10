@@ -499,30 +499,191 @@ RE:
 	
 // exam3
 	// if, switch
-	
-	int num, result;
+	/*
+	int num;
 
 	printf("한 정수 입력 : "); scanf("%d", &num);
-	printf("%d의 절댓값 : ", num);
+	printf("%d의 절댓값 : ", num); getch();
 
 	switch (num < 0) { case 1: num = -num; }
 
-	printf("%d", num);
-	
-	
+	printf("%d\n", num);
+	*/
 	
 	// if문
 	/*
 	int num;
 
 	printf("한 정수 입력 : "); scanf("%d", &num);
+	printf("%d의 절댓값 : ", num);
 
-	if (num < 0) num = -num;		
-	
-	printf("%d의 절댓값 : %d", num, num);
+	if (num < 0) num = -num;	
+
+	printf("%d\n", num);
 	*/
 
+// N.8
+// exam1
+	// My
+	/*
+	int a, b, c, result;
+
+	printf("세 정수 입력: "); scanf("%d %d %d", &a, &b, &c);
+
+	
+	// 1.
+	if (a >= b && a >= c) result = a;
+	if (b >= a && b >= c) result = b;
+	if (c >= a && c >= b) result = c;
+
+	// 2.
+	result = a >= b && a >= c ? a : b >= a && b >= c ? b : c;
+
+	printf("MAX : %d\n", result);
+	*/
+
+	// Answer
+	/*
+	int a, b, c, max;
+
+	printf("첫번째 정수 입력 : "); scanf("%d", &a);
+	printf("두번째 정수 입력 : "); scanf("%d", &b);
+	printf("세번째 정수 입력 : "); scanf("%d", &c);
+	
+	// 1.
+	if (a >= b && a >= c) max = a;
+	else if (b >= a && b >= c) max = b;
+	else max = c;
+	printf("MAX : %d\n", max);
+	
+	// 2.
+	max = a;
+	if (max < b) max = b;
+	if (max < c) max = c;
+
+	printf("MAX : %d\n", max);
+	*/
+
+// exam2
+	/*
+	int num1, num2, result;
+	char oper;
+
+	printf("첫번째 정수 : "); scanf("%d", &num1); getchar();
+	printf("사칙 연산자 : "); scanf("%c", &oper); 
+	printf("두번째 정수 : "); scanf("%d", &num2); 
+
+	switch (oper)
+	{
+		case '+': result = num1 + num2; break;
+		case '-': result = num1 - num2; break;
+		case '*': result = num1 * num2; break;
+		case '/': result = num1 / num2; break;
+	}
+
+	printf("%d %c %d = %d\n", num1, oper, num2, result);
+	*/
+	
+// exam3
+	/*
+	int i = 1, sum = 0, num = 0;
+
+	// for
+	for (i = 1; i <= 100; i++)
+	{
+		int a = i % 7;
+		if (!a)
+		{
+			sum += i;
+			num++;
+		}
+	}
+
+	// while
+	while (i <= 100)
+	{
+		int a = i % 7;
+		if (!a)
+		{
+			sum += i;
+			num++;
+		}
+		i++;
+	}
+
+	// do~while
+	do
+	{
+		int a = i % 7;
+		if (!a)
+		{
+			sum += i;
+			num++;
+		}
+		i++;
+	} while (i <= 100);
+	
+	printf("1 ~ 100 중 7의 배수 합 : %d\n", sum);
+	printf("1 ~ 100 중 7의 배수 갯수 : %d\n", num);
+	*/
+	
+// exam4
+	/*
+	int i = 1, result = 0;
+
+	// for문 1개
+	for (i = 1; i <= 25; i++)
+	{
+		result = i % 5;
+
+		printf("%3d", i);
+		if (!result) printf("\n");
+	}
+	
+	
+	// for문 2개
+	int j;
+
+	for (i = 1; i <= 5; i++)
+	{
+		for (j = 1; j <= 5; j++) printf("%3d", result++);
+		printf("\n");
+	}
+
+	// while문 1개
+	while (i <= 25)
+	{
+		result = i % 5;
+
+		printf("%3d", i++);
+		if (!result) printf("\n");
+	}
+
+	// while문 2개
+	int j = 1;
+
+	while (i <= 5)
+	{
+		while (j <= 5)
+		{
+			printf("%3d", result++);
+			j++;
+		}
+		printf("\n");
+		j = 1;
+		i++;
+	}
+	*/
+	
+	
+	
+	
+		
+
+
+	
+	
 	
 
-
+	
 }
