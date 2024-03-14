@@ -674,6 +674,113 @@ RE:
 		i++;
 	}
 	*/
+
+// N.9
+// array
+	/*
+	// 1.
+	int a[3];
+	a[0] = 10;
+	a[1] = 20;
+	a[2] = 30;
+
+	// 1-1
+		int a, b, c;
+
+		a = 10;
+		b = 20;
+		c = 30;
+
+	// 2.
+	int a[3] = { 10, 20, 30 };
+
+	// 2-1
+	int a = 10, b = 20, b = 30;
+
+	// 3.
+	int i, a[3];
+
+	for (i = 0; i < 3; i++)
+	{
+		printf("정수 입력 : ");
+		scanf("%d", &a[i]);
+	}
+	printf("받은 정수 : ");
+	for (i = 0 ; i < 3; i++) printf("%3d", a[i]);
+
+	// 3-1
+	int a, b, c;
+
+	printf("첫번째 정수 : ");
+	scanf("%d", &a);
+	printf("두번째 정수 : ");
+	scanf("%d", &b);
+	printf("세번째 정수 : ");
+	scanf("%d", &c);
+	*/
+	
+// exam1
+	/*
+	int arr[3];
+
+	printf("첫번째 정수 입력 : ");  scanf("%d", &arr[0]);
+	printf("두번째 정수 입력 : ");  scanf("%d", &arr[1]);
+	arr[2] = arr[0] + arr[1];
+
+	printf("%d + %d = %d", arr[0], arr[1], arr[2]);
+	*/
+
+// exam2
+	/*
+	int arr[4];
+
+	printf("첫번째 정수 입력 : ");  scanf("%d", &arr[0]);
+	printf("두번째 정수 입력 : ");  scanf("%d", &arr[1]);
+	printf("세번째 정수 입력 : ");  scanf("%d", &arr[2]);
+
+	arr[3] = arr[0];
+	if (arr[3] < arr[1]) arr[3] = arr[1];
+	if (arr[3] < arr[2]) arr[3] = arr[2];
+	
+	printf("세 정수 중 가장 큰 수는 %d이다.", arr[3]);
+	*/
+	
+// exam3
+	/*
+	int arr[10];
+
+	for (int j = 0; j < 10; j++)
+	{
+		printf("%d번째 정수 입력 : ", j + 1);  scanf("%d", &arr[j]);
+	};
+
+	printf("받은 정수 : ");
+	for (int i = 0; i < 10; i++) printf("%-3d", arr[i]);
+	*/
+
+// exam4
+	/*
+	int i, j, cn = 1, arr[2][5];
+
+	for (i = 0; i < 2; i++)
+	{
+		for (j = 0; j < 5; j++)
+		{
+			printf("%d번째 정수 입력 : ", cn);  scanf("%d", &arr[i][j]);
+			cn++;
+		};
+	}
+
+	printf("받은 정수 : ");
+	for (i = 0; i < 2; i++)
+		for (j = 0; j < 5; j++) printf("%-2d", arr[i][j]);
+	*/
+	
+	
+	
+	
+	
+	
 	
 	
 	

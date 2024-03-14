@@ -1,0 +1,77 @@
+exam1
+두 정수의 합 => ( int a, b, sum -> int arr[3] )
+
+exam2
+세 정수 입력 => Max ( int a, b, c, max -> int arr[4] )
+
+exam3
+10개 정수를 입력, 출력 => int arr[10]
+
+exam4
+10개 정수 입,출력 ( int arr[10] -> int arr[2][5] )
+
+---------------------------------------------------------------------------
+
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>// getch();
+
+void main
+{
+// exam1
+	/*
+	int arr[3];
+
+	printf("첫번째 정수 입력 : ");  scanf("%d", &arr[0]);
+	printf("두번째 정수 입력 : ");  scanf("%d", &arr[1]);
+	arr[2] = arr[0] + arr[1];
+
+	printf("%d + %d = %d", arr[0], arr[1], arr[2]);
+	*/
+
+// exam2
+	/*
+	int arr[4];
+
+	printf("첫번째 정수 입력 : ");  scanf("%d", &arr[0]);
+	printf("두번째 정수 입력 : ");  scanf("%d", &arr[1]);
+	printf("세번째 정수 입력 : ");  scanf("%d", &arr[2]);
+
+	arr[3] = arr[0];
+	if (arr[3] < arr[1]) arr[3] = arr[1];
+	if (arr[3] < arr[2]) arr[3] = arr[2];
+	
+	printf("세 정수 중 가장 큰 수는 %d이다.", arr[3]);
+	*/
+	
+// exam3
+	/*
+	int arr[10];
+
+	for (int j = 0; j < 10; j++)
+	{
+		printf("%d번째 정수 입력 : ", j + 1);  scanf("%d", &arr[j]);
+	};
+
+	printf("받은 정수 : ");
+	for (int i = 0; i < 10; i++) printf("%-3d", arr[i]);
+	*/
+
+// exam4
+	/*
+	int i, j, cn = 1, arr[2][5];
+
+	for (i = 0; i < 2; i++)
+	{
+		for (j = 0; j < 5; j++)
+		{
+			printf("%d번째 정수 입력 : ", cn);  scanf("%d", &arr[i][j]);
+			cn++;
+		};
+	}
+
+	printf("받은 정수 : ");
+	for (i = 0; i < 2; i++)
+		for (j = 0; j < 5; j++) printf("%-2d", arr[i][j]);
+	*/
+}
