@@ -775,8 +775,75 @@ RE:
 	for (i = 0; i < 2; i++)
 		for (j = 0; j < 5; j++) printf("%-2d", arr[i][j]);
 	*/
+
+// N.10
+// Selection Sort
+	// 내림차순
+	/*
+	int arr[5];
+
+	for (int i = 0; i < 4; i++)
+		for (int j = i + 1; j < 5; j++)
+			if (arr[i] < arr[j])
+			{
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+	*/
 	
+	// 오름차순
+	/*
+	int arr[5];
+
+	for (int i = 0; i < 4; i++)
+		for (int j = i + 1; j < 5; j++)
+			if (arr[i] > arr[j])
+			{
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+	*/
+
+// exam1
+	/*
+	int arr[10];
+
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d번째 정수 입력 : ", i + 1);
+		scanf("%d", &arr[i]);
+	}
+	printf("\n");
 	
+	for (int i = 0; i < 9; i++)
+		for (int j = i + 1; j < 10; j++)
+			if (arr[i] < arr[j])
+			{
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+
+	printf("내림차순 : ");
+	for (int i = 0; i < 10; i++) printf("%-3d", arr[i]);
+	printf("\n"); getch();
+
+	for (int i = 0; i < 9; i++)
+		for (int j = i + 1; j < 10; j++)
+			if (arr[i] > arr[j])
+			{
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+
+	printf("오름차순 : ");
+	for (int j = 0; j < 10; j++) printf("%-3d", arr[j]);
+	*/
+	
+		
 	
 	
 	
