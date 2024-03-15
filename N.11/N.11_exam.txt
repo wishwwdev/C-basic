@@ -1,0 +1,58 @@
+exam1
+두 수의 합을 구하라(함수로) - int
+
+exam2
+두 수의 합을 구하라(함수로) - void
+
+---------------------------------------------------------------------------
+
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>// getch();
+
+int sub(int, int); // 함수의 원형정의
+
+// exam1
+/*
+int sub(int a, int b)
+{
+	int sum = a + b;
+
+	return sum;
+}
+*/
+
+// exam2
+/*
+void sub(int *a, int *b, int *sum)
+{
+	*sum = *a + *b;
+}
+*/
+
+void main
+{
+// exam1
+	/*
+	int a, b, sum;
+
+	printf("첫번째 정수 입력 : "); scanf("%d", &a);
+	printf("두번째 정수 입력 : "); scanf("%d", &b);
+
+	sum = sub(a, b);
+
+	printf("%d + %d = %d", a, b, sum);
+	*/
+
+// exam2
+	/*
+	int a, b, sum;
+
+	printf("첫번째 정수 입력 : "); scanf("%d", &a);
+	printf("두번째 정수 입력 : "); scanf("%d", &b);
+	
+	sub(&a, &b, &sum);
+
+	printf("%d + %d = %d", a, b, sum);
+	*/
+}

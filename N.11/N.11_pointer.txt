@@ -1,0 +1,38 @@
+// pointer
+	// 1,
+	/*
+	float sub(float a, float b)
+	{
+		float sum;
+		sum = a + b;
+		a = 10.0;
+		b = 20.0;
+		return sum;
+	}
+
+	void main()
+	{
+		float a = 5.0, b = 3.0, sum;
+		sum = sub(a, b);
+
+		printf("%f + %f = %f", a, b, sum);
+	}
+	*/
+	
+	// 2.
+	/*
+	void sub(float *a, float *b, float *sum)
+	{
+		*sum = *a + *b;
+		*a = 10.0;
+		*b = 20.0
+	}
+
+	void main()
+	{
+		float a = 5.0, b = 3.0, sum;
+		sub(&a, &b, &sum);
+
+		printf("%f + %f = %f", a, b, sum);
+	}
+	*/

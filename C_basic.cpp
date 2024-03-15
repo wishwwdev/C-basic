@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<conio.h>// getch();
 
+
 void main()
 {
 	/*
@@ -842,22 +843,84 @@ RE:
 	printf("오름차순 : ");
 	for (int j = 0; j < 10; j++) printf("%-3d", arr[j]);
 	*/
-	
-		
-	
-	
-	
-	
-	
-	
-	
-	
-		
 
+// N.11
+// pointer
+	// 1,
+	/*
+	float sub(float a, float b)
+	{
+		float sum;
+		sum = a + b;
+		a = 10.0;
+		b = 20.0;
+		return sum;
+	}
 
-	
-	
-	
+	void main()
+	{
+		float a = 5.0, b = 3.0, sum;
+		sum = sub(a, b);
 
+		printf("%f + %f = %f", a, b, sum);
+	}
+	*/
+	
+	// 2.
+	/*
+	void sub(float *a, float *b, float *sum)
+	{
+		*sum = *a + *b;
+		*a = 10.0;
+		*b = 20.0
+	}
+
+	void main()
+	{
+		float a = 5.0, b = 3.0, sum;
+		sub(&a, &b, &sum);
+
+		printf("%f + %f = %f", a, b, sum);
+	}
+	*/
+
+// exam1
+/*
+int sub(int a, int b)
+{
+	int sum = a + b;
+
+	return sum;
+}
+*/
+	/*
+	int a, b, sum;
+
+	printf("첫번째 정수 입력 : "); scanf("%d", &a);
+	printf("두번째 정수 입력 : "); scanf("%d", &b);
+
+	sum = sub(a, b);
+
+	printf("%d + %d = %d", a, b, sum);
+	*/
+
+// exam2
+/*
+void sub(int *a, int *b, int *sum)
+{
+	*sum = *a + *b;
+}
+*/
+	/*
+	int a, b, sum;
+
+	printf("첫번째 정수 입력 : "); scanf("%d", &a);
+	printf("두번째 정수 입력 : "); scanf("%d", &b);
+	
+	sub(&a, &b, &sum);
+
+	printf("%d + %d = %d", a, b, sum);
+	*/
 	
 }
+
