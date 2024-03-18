@@ -1,0 +1,43 @@
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>
+
+void main
+{
+// pointer
+	// 1.
+	/*
+	int* p;
+
+	p = 10; // 불가능
+
+	p = 0; // null을 넣은거라고 인식
+
+	p = (int*)200; 
+	// 만약 p가 가리키고 있는 주소값이 1000인 상태에서, p = (int*)200; 연산을 할 경우
+	// p가 가리키고 있는 주소값은 1200이 됨.		cf) p의 주소값 X, p가 가리키는(가지고) 있는 주소값 O
+
+	// 포인트 연산자는 정수형이기 때문에 강제형변환(cast)을 통해 데이터를 집어 넣을 수 있음
+
+	printf("p = %d\n", p);
+	*/
+	
+	// 2.
+	/*
+	int arr[3] = { 100, 200, 300 };
+	int* pt1, * pt2;
+
+	pt1 = arr; // >> pt1 == &arr[0];
+	pt2 = &arr[2];
+
+	printf("pt1 = %u *pt1 = %d &pt1 = %u\n", pt1, *pt1, &pt1);
+
+	pt1 = pt1 + 1;
+	// 주소를 하나 더 증가시킨다는 뜻
+	// arr[3]은 한 칸에 정수(4byte)가 들어있기 때문에 다음 칸의 주소값은 +4가 되는 것임
+
+	printf("pt1 = %u *pt1 = %d &pt1 = %u\n", pt1, *pt1, &pt1);
+
+	printf("pt2 = %u *pt2 = %d &pt2 = %u\n", pt2, *pt2, &pt2);
+	*/
+}
