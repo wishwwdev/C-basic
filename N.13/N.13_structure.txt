@@ -1,0 +1,36 @@
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>// getch();
+
+
+void main
+{
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>// getch();
+
+struct Style
+{
+	char name[10];
+	int bust, waist, hip;
+} s, a = { "ABC", 1, 2, 3 }; // Style의 전역변수 s를 선언, Style의 전역변수 a를 선언과 동시에 초기화함
+
+void main
+{
+// 구조체(structure)
+	/*
+	// struct Style s;  C   : struct를 쓸 때마다 적어줘야함.
+	// Style s;         C++ : struct는 처음 정의할 때만 씀임.
+
+	Style s = { "홍길동", 10, 20, 30 };
+	int a = 1;
+
+	s.hip = 33; // 구조체 값 변경방법
+	scanf("%d", &s.hip); // 만약 s.name했을 경우에는 번지연산자 안써도됨(문자열은 포인터라 s.name의 값은 주소값임)
+
+	// 만약 s가 포인터변수일 경우 값 변경방법 
+	// ex) Style *s = { "홍길동", 10, 20, 30 };
+	// s->hip = 33; 
+	// scanf("%d", &s->hip);
+	*/
+}

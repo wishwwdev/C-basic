@@ -1,5 +1,6 @@
 ﻿#pragma warning(disable : 4996)
 #include<stdio.h>
+#include<string.h> // strcpy();
 #include<conio.h>// getch();
 
 
@@ -1016,7 +1017,116 @@ void sub(int *a, int *b, int *sum)
 	// 정리 : 간접연산자 O -> 해당 주소 안의 데이터를 직접 가리키는 거라 해당 데이터만 의미(문자로 출력됨)
 	//		  간접연산자 X -> 해당 주소값를 가리킴(주소값 안의 데이터가 null인 주소값까지 -> 문자열로 출력됨)
 	*/
+
+// N.13
+// 구조체(structure)
+	/*
+	// struct Style s;  C   : struct를 쓸 때마다 적어줘야함.
+	// Style s;         C++ : struct는 처음 정의할 때만 씀임.
+
+	Style s = { "홍길동", 10, 20, 30 };
+	int a = 1;
+
+	s.hip = 33; // 구조체 값 변경방법
+	scanf("%d", &s.hip); // 만약 s.name했을 경우에는 번지연산자 안써도됨(문자열은 포인터라 s.name의 값은 주소값임)
+
+	// 만약 s가 포인터변수일 경우 값 변경방법 
+	// ex) Style *s = { "홍길동", 10, 20, 30 };
+	// s->hip = 33; 
+	// scanf("%d", &s->hip);
+	*/
 	
+// exam1
+	// (1) 
+	/*
+	Style s = { "홍길동", 10, 20, 30 };
+
+	printf("이름 : %s\n가슴 : %d\n허리 : %d\n힙   : %d\n", s.name, s.chest, s.waist, s.hip);
+	*/
+
+	// (2)
+	/*
+	Style s = { "홍길동", 10, 20, 30 };
+
+	strcpy(s.name, "김철수"); // s.name(포인터)와 "김철수"(포인터)는 모두 포인터이기 때문에(주소값가짐) strcpy()을 사용하여 값을 넣어줌 
+	s.chest = 40;					※ #include<strinf.h> 사용해야함
+	s.waist = 50;
+	s.hip = 60;
+
+	printf("이름 : %s\n가슴 : %d\n허리 : %d\n힙   : %d\n", s.name, s.chest, s.waist, s.hip);
+	*/
+	
+	// (3)
+	/*
+	Style s;
+
+	printf("이름 : "); scanf("%s", s.name);
+	printf("가슴 : "); scanf("%d", &s.chest);
+	printf("허리 : "); scanf("%d", &s.waist);
+	printf("힙   : "); scanf("%d", &s.hip);
+
+	printf("이름 : %s\n가슴 : %d\n허리 : %d\n힙   : %d\n", s.name, s.chest, s.waist, s.hip);
+	*/
+
+	// (4)
+	/*
+	Style arr[5];
+
+	for (int i = 0; i < 5; i++)
+	{
+		printf("%d.\n", i + 1);
+		printf("이름 : "); scanf("%s", arr[i].name);
+		printf("가슴 : "); scanf("%d", &arr[i].chest);
+		printf("허리 : "); scanf("%d", &arr[i].waist);
+		printf("힙   : "); scanf("%d", &arr[i].hip);
+	}
+	getch();
+	printf("\n");
+
+	for (int j = 0; j < 5; j++)
+	{
+		printf("%d번째 배열\n", j + 1);
+		printf("이름 : %s\n가슴 : %d\n허리 : %d\n힙   : %d\n", arr[j].name, arr[j].chest, arr[j].waist, arr[j].hip);
+	}
+	*/
+
+	// (5)
+	/*
+	Style arr[5], temp;
+	int i, j;
+
+	// 입력
+	for (i = 0; i < 5; i++)
+	{
+		printf("%d.\n", i + 1);
+		printf("이름 : "); scanf("%s", arr[i].name);
+		printf("가슴 : "); scanf("%d", &arr[i].chest);
+		printf("허리 : "); scanf("%d", &arr[i].waist);
+		printf("힙   : "); scanf("%d", &arr[i].hip);
+	}
+	getch();
+	printf("\n");
+	
+	// 정렬
+	for (i = 0; i < 4; i++)
+		for (j = i + 1; j < 5; j++)
+			if (arr[i].hip < arr[j].hip)
+			{
+				temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+
+	// 출력
+	for (i = 0; i < 5; i++)
+	{
+		printf("%-3s %-3d %-3d %-3d\n", arr[i].name, arr[i].chest, arr[i].waist, arr[i].hip);
+	}
+	*/
+	
+	
+	
+
 
 
 	

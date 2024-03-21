@@ -1,0 +1,111 @@
+exam1
+struct Style 정의
+멤버 : 이름, 가슴, 허리, 힙
+(1) 초기화  -> 출력
+(2) 값 변경 -> 출력
+(3) scanf() -> 입·출력
+(4) 데이터 : 5건(배열) -> 입·출력
+(5) 출력시 힙사이즈가 큰순으로 내림차순 정렬
+
+---------------------------------------------------------------------------
+
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<string.h> // strcpy();
+#include<conio.h>// getch();
+
+struct Style {
+	char name[10];
+	int chest, waist, hip;
+};
+
+void main
+{
+// exam1
+	// (1) 
+	/*
+	Style s = { "홍길동", 10, 20, 30 };
+
+	printf("이름 : %s\n가슴 : %d\n허리 : %d\n힙   : %d\n", s.name, s.chest, s.waist, s.hip);
+	*/
+
+	// (2)
+	/*
+	Style s = { "홍길동", 10, 20, 30 };
+
+	strcpy(s.name, "김철수"); // s.name(포인터)와 "김철수"(포인터)는 모두 포인터이기 때문에(주소값가짐) strcpy()을 사용하여 값을 넣어줌 
+	s.chest = 40;					※ #include<strinf.h> 사용해야함
+	s.waist = 50;
+	s.hip = 60;
+
+	printf("이름 : %s\n가슴 : %d\n허리 : %d\n힙   : %d\n", s.name, s.chest, s.waist, s.hip);
+	*/
+	
+	// (3)
+	/*
+	Style s;
+
+	printf("이름 : "); scanf("%s", s.name);
+	printf("가슴 : "); scanf("%d", &s.chest);
+	printf("허리 : "); scanf("%d", &s.waist);
+	printf("힙   : "); scanf("%d", &s.hip);
+
+	printf("이름 : %s\n가슴 : %d\n허리 : %d\n힙   : %d\n", s.name, s.chest, s.waist, s.hip);
+	*/
+
+	// (4)
+	/*
+	Style arr[5];
+
+	for (int i = 0; i < 5; i++)
+	{
+		printf("%d.\n", i + 1);
+		printf("이름 : "); scanf("%s", arr[i].name);
+		printf("가슴 : "); scanf("%d", &arr[i].chest);
+		printf("허리 : "); scanf("%d", &arr[i].waist);
+		printf("힙   : "); scanf("%d", &arr[i].hip);
+	}
+	getch();
+	printf("\n");
+
+	for (int j = 0; j < 5; j++)
+	{
+		printf("%d번째 배열\n", j + 1);
+		printf("이름 : %s\n가슴 : %d\n허리 : %d\n힙   : %d\n", arr[j].name, arr[j].chest, arr[j].waist, arr[j].hip);
+	}
+	*/
+
+	// (5)
+	/*
+	Style arr[5], temp;
+	int i, j;
+
+	// 입력
+	for (i = 0; i < 5; i++)
+	{
+		printf("%d.\n", i + 1);
+		printf("이름 : "); scanf("%s", arr[i].name);
+		printf("가슴 : "); scanf("%d", &arr[i].chest);
+		printf("허리 : "); scanf("%d", &arr[i].waist);
+		printf("힙   : "); scanf("%d", &arr[i].hip);
+	}
+	getch();
+	printf("\n");
+	
+	// 정렬
+	for (i = 0; i < 4; i++)
+		for (j = i + 1; j < 5; j++)
+			if (arr[i].hip < arr[j].hip)
+			{
+				temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+
+	// 출력
+	for (i = 0; i < 5; i++)
+	{
+		printf("%-3s %-3d %-3d %-3d\n", arr[i].name, arr[i].chest, arr[i].waist, arr[i].hip);
+	}
+	*/
+}
