@@ -2,6 +2,9 @@
 #include<stdio.h>
 #include<string.h> // strcpy();
 #include<conio.h>// getch();
+// #include<iostream.h> // ms 이외의 버전
+#include<iostream> // ms버전 -> cout, cin을 사용하기 위함(C언어의 printf(), scanf() 역할)
+using namespace std;
 
 
 void main()
@@ -1123,6 +1126,154 @@ void sub(int *a, int *b, int *sum)
 		printf("%-3s %-3d %-3d %-3d\n", arr[i].name, arr[i].chest, arr[i].waist, arr[i].hip);
 	}
 	*/
+
+// N.14
+// structure pointer
+	/*
+	Ballpen ball = { "monma", "blue", 1000 };
+	Ballpen* ballp;
+	ballp = &ball;
+
+	scanf("%s %s %d", (*ballp).maker, (*ballp).color, &(*ballp).price);
+
+	(*ballp).price = 100;
+
+	printf("%s, %s, %d\n", ball.maker, ballp->color, (*ballp).price); // (*ballp).maker로 사용하는 것을 추천 (범용성 때문에)
+
+	printf("size of ball : %d, size of ballp : %d\n", sizeof(ball), sizeof(ballp));
+	
+	ballp++;
+
+	printf("%s, %s, %d\n", (*(ballp-1)).maker, (*(ballp - 1)).color, (*(ballp - 1)).price);
+	*/
+
+// C vs C++
+	// 변수 선언
+	// 변수 선언시, C에서는 반드시 시작 부분에 선언해야한다.
+	// 하지만, C++에서는 아무 곳에서 선언가능하다.(당연히 선언된 범위 내에서만 사용가능)
+	/*
+		int a, b, c;
+	
+	for (int i = 1; i <= 10; i++)	// C++만 가능
+	{
+		 int f = 1;					// C++만 가능
+	}
+	*/
+
+	// 전역 식별자
+	// 변수 앞에 ‘ :: ’를 사용함
+	// 지역변수와 전역변수의 이름이 같을 때, 변수 앞에 ‘ :: ‘을 사용하여 전역변수임을 나타내는 식별자임
+	/*
+	int su = 100; // 전역변수
+
+	void main()
+	{
+		int su = 200;
+	
+		printf("su = %d", su);     // 지역변수 su를 출력
+	
+		printf("::su = %d", ::su); // 전역변수 su를 출력
+	}
+	*/
+
+	// printf, scanf vs cout, cin
+	// C언어 : printf(), scanf()
+	// C++ : cout, cin
+	// 1. C언어에서 입력 후 ‘enter’를 getchar()로 걸러냈다면, C++의 cin함수는 ‘enter’를 자동으로 걸러냄
+	// 2. 입력시 번지연산자를 사용하지 않아도됨
+	/*
+	char name[10];
+	int age;
+
+	printf("나이 입력 : "); scanf("%d", &age); getchar();
+	printf("이름 입력 : "); scanf("%s", name);
+
+	cout << "나이 입력 : "; cin >> age;		// 번지연산자X, getchar()X
+	cout << "이름 입력 : "; cin >> name;
+
+	cout << "나이, 이름순으로 입력 : ";
+		cin >> name >> age;						  // 한 번에 입력
+
+	cout << "내 이름은 " << name << "이고 나이는" // 한 번에 출력
+		 << age << "입니다." << endl;
+	*/
+
+// exam1
+	// (1)
+	/*
+	Person person, *personp;
+
+	person = { "홍길동", "A", 10 };
+	personp = &person;
+
+	printf("%s %d %s", (*personp).name, (*personp).age, (*personp).bloodType);
+	*/
+
+	// (2)
+	/*
+	Person person, *personp;
+
+	person = { "홍길동", "A", 10 };
+	personp = &person;
+
+	strcpy((*personp).name, "김철수");
+
+	printf("%s %d %s", (*personp).name, (*personp).age, (*personp).bloodType);
+	*/
+
+	// (3)
+	/*
+	Person person, * personp;
+
+	personp = &person;
+
+	scanf("%s %d %s", (*personp).name, &(*personp).age, (*personp).bloodType);
+
+	printf("%s %d %s", (*personp).name, (*personp).age, (*personp).bloodType);
+	*/
+
+	// (4)
+	/*
+	Person person[5], temp;
+	int i;
+
+	for (i = 0; i < 5; i++)
+		scanf("%s %d %s", person[i].name, &person[i].age, person[i].bloodType); getchar();
+	getch();
+
+	for (i = 0; i < 5; i++)
+		printf("%s %d %s\n", person[i].name, person[i].age, person[i].bloodType);
+	*/
+	
+
+	// (5)
+	/*
+	Person person[5], temp;
+	int i, j;
+
+	for (i = 0; i < 5; i++)
+		scanf("%s %d %s", person[i].name, &person[i].age, person[i].bloodType); getchar();
+
+	for (i = 0; i < 4; i++)
+		for (j = i+1; j < 5; j++)
+			if (person[i].age < person[j].age)
+			{
+				temp = person[i];
+				person[i] = person[j];
+				person[j] = temp;
+			}
+	getch();
+
+	for (i = 0; i < 5; i++)
+		printf("%s %d %s\n", person[i].name, person[i].age, person[i].bloodType);
+	*/
+	
+	
+
+	
+
+	
+	
 	
 	
 	

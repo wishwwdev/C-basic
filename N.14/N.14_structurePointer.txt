@@ -1,0 +1,30 @@
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<conio.h>// getch();
+
+struct Ballpen {
+	char maker[10], color[5];
+	int price;
+};
+
+void main
+{
+// structure pointer
+	/*
+	Ballpen ball = { "monma", "blue", 1000 };
+	Ballpen* ballp;
+	ballp = &ball;
+
+	scanf("%s %s %d", (*ballp).maker, (*ballp).color, &(*ballp).price);
+
+	(*ballp).price = 100;
+
+	printf("%s, %s, %d\n", ball.maker, ballp->color, (*ballp).price); // (*ballp).maker로 사용하는 것을 추천 (범용성 때문에)
+
+	printf("size of ball : %d, size of ballp : %d\n", sizeof(ball), sizeof(ballp));
+	
+	ballp++;
+
+	printf("%s, %s, %d\n", (*(ballp-1)).maker, (*(ballp - 1)).color, (*(ballp - 1)).price);
+	*/
+}

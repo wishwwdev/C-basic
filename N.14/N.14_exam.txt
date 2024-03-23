@@ -1,0 +1,93 @@
+exam1
+struct Person
+멤버 : 이름, 나이, 혈액형
+(1) 초기화  -> 출력
+(2) 값 변경 -> 출력
+(3) scanf() -> 입·출력
+(4) 데이터 : 5건(배열) -> 입·출력
+(5) 출력시 나이가 큰순으로 내림차순 정렬
+
+---------------------------------------------------------------------------
+
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<string.h> // strcpy();
+#include<conio.h>// getch();
+
+struct Person {
+	char name[10], bloodType[5];
+	int age;
+};
+
+void main
+{
+// exam1
+	// (1)
+	/*
+	Person person, *personp;
+
+	person = { "홍길동", "A", 10 };
+	personp = &person;
+
+	printf("%s %d %s", (*personp).name, (*personp).age, (*personp).bloodType);
+	*/
+
+	// (2)
+	/*
+	Person person, *personp;
+
+	person = { "홍길동", "A", 10 };
+	personp = &person;
+
+	strcpy((*personp).name, "김철수");
+
+	printf("%s %d %s", (*personp).name, (*personp).age, (*personp).bloodType);
+	*/
+
+	// (3)
+	/*
+	Person person, * personp;
+
+	personp = &person;
+
+	scanf("%s %d %s", (*personp).name, &(*personp).age, (*personp).bloodType);
+
+	printf("%s %d %s", (*personp).name, (*personp).age, (*personp).bloodType);
+	*/
+
+	// (4)
+	/*
+	Person person[5], temp;
+	int i;
+
+	for (i = 0; i < 5; i++)
+		scanf("%s %d %s", person[i].name, &person[i].age, person[i].bloodType); getchar();
+	getch();
+
+	for (i = 0; i < 5; i++)
+		printf("%s %d %s\n", person[i].name, person[i].age, person[i].bloodType);
+	*/
+	
+
+	// (5)
+	/*
+	Person person[5], temp;
+	int i, j;
+
+	for (i = 0; i < 5; i++)
+		scanf("%s %d %s", person[i].name, &person[i].age, person[i].bloodType); getchar();
+
+	for (i = 0; i < 4; i++)
+		for (j = i+1; j < 5; j++)
+			if (person[i].age < person[j].age)
+			{
+				temp = person[i];
+				person[i] = person[j];
+				person[j] = temp;
+			}
+	getch();
+
+	for (i = 0; i < 5; i++)
+		printf("%s %d %s\n", person[i].name, person[i].age, person[i].bloodType);
+	*/
+}

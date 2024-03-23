@@ -2,13 +2,6 @@
 #include<stdio.h>
 #include<conio.h>// getch();
 
-
-void main
-{
-#pragma warning(disable : 4996)
-#include<stdio.h>
-#include<conio.h>// getch();
-
 struct Style
 {
 	char name[10];
