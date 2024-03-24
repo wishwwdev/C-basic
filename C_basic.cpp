@@ -1,10 +1,15 @@
 ﻿#pragma warning(disable : 4996)
-#include<stdio.h>
+#include<stdio.h> // printf();, scanf();
 #include<string.h> // strcpy();
-#include<conio.h>// getch();
+#include<conio.h> // getch();
+
+#include<stdlib.h> // malloc();
+// or #include<malloc.h> //malloc();
+
 // #include<iostream.h> // ms 이외의 버전
 #include<iostream> // ms버전 -> cout, cin을 사용하기 위함(C언어의 printf(), scanf() 역할)
 using namespace std;
+
 
 
 void main()
@@ -1128,7 +1133,7 @@ void sub(int *a, int *b, int *sum)
 	*/
 
 // N.14
-// structure pointer
+// Structure Pointer
 	/*
 	Ballpen ball = { "monma", "blue", 1000 };
 	Ballpen* ballp;
@@ -1267,6 +1272,127 @@ void sub(int *a, int *b, int *sum)
 	for (i = 0; i < 5; i++)
 		printf("%s %d %s\n", person[i].name, person[i].age, person[i].bloodType);
 	*/
+	
+// N.15
+// Variable(프로세스 메모리 구조)
+	// 1.
+	/*
+	puts(" STATIC AUTO ");
+	sub();
+	sub();
+	sub();
+	*/
+
+	// 2.
+	/*
+	char *name = new char[10];
+	int *age = new int;
+
+	name = "홍길동"; 
+	// >> 오류
+	// 답 : strcpy(name, "홍길동");
+	// new는 heap영역에 메모리가 할당은 되지만 할당된 주소값을 참조하는 변수가 없음
+	// name이 heap영역에 할당된 메모리 주소값을 데이터로 가지지만 그 heap영역에 할당된 메모리를 참조하는 변수가 없음
+	// 그래서 strcpy()를 통해 그 메모리 안에 직접 값을 넣어줘야함
+
+	age = 20;
+	// >> 정상
+	*/
+	
+	// 3-1
+	// heap영역에 선언된 변수에 대해 delete
+	// 공간해지, 자원반납(메모리 공간이 사라지는 것이 아님)
+	// 공간을 해지해주므로써 컴퓨터가 메모리 공간을 효율적으로 사용할 수 있음
+	/*
+	char* name = new char[10];
+	int* age = new int;
+
+	delete []name, age;
+	*/
+	
+	// 3-2
+	// 자유변수 new를 통해 heap영역에 메모리 할당
+	// 포인터변수 arr의 공간을 미리 지정하지 않아도 됨(실시간으로 메모리 할당 가능)
+	// static(static), auto(stack)을 사용하면 공간을 지정하고 실행해야됨
+	/*
+	int cn, i;
+
+	printf("처리할 데이터 갯수 입력 : "); scanf("%d", &cn);
+
+	int *arr = new int[cn]; // new , class -> heap영역
+
+	// static int arr[cn];	// static영역
+	// int arr[cn];			// stack영역
+
+	for (i = 0; i < cn; i++)
+	{
+		printf("%d번째 정수 : ", i + 1); scanf("%d", &arr[i]);
+	}
+
+	printf("받은 정수 : ");
+	for (i = 0; i < cn; i++)
+		printf("%-3d", arr[i]);
+	*/
+
+// malloc()
+	// malloc : heap에 공간을 할당할 때 사용하는 표준 함수
+	// #include<stdlib.h> 또는 #include<malloc.h> 를 사용해야함
+
+	// int *arr = (int *)malloc(sizeof(int) * cn);	// C
+	// int *arr = new int[cn];						// C++
+	// 예시
+	// 만약 cn이 3일 경우
+	// malloc(4byte 곱하기 3) => malloc(12) => (int *)malloc(12) => 포인터로 만듦
+	// 컴파일러에 따라 int의 byte값이 달라서 sizeof(int)를 사용하여 그만큼의 메모리 공간을 heap에 할당하는 것임
+
+// exam1
+	/*
+	int cn, i, j, temp;
+
+	printf("몇개의 정수를 입력받으시겠습니까? : "); scanf("%d", &cn);
+
+	// int *arr = (int *)malloc(sizeof(int) * cn); // C언어
+	int *arr = new int[cn]; // C++
+
+	for (i = 0; i < cn; i++)
+	{
+		printf("%d번째 정수 입력 : ", i + 1); scanf("%d", &arr[i]);
+	}
+
+	printf("받은 정수 : ");
+	for (i = 0; i < cn; i++)
+		printf("%-3d", arr[i]); 
+	puts(""); getch();
+
+	for (i = 0; i < cn -1; i++)
+		for (j = i+1; j < cn; j++)
+			if (arr[i] < arr[j])
+			{
+				temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+	
+	printf("내림차순 : ");
+	for (i = 0; i < cn; i++)
+		printf("%-3d", arr[i]);
+	puts(""); getch();
+
+	printf("오름차순 : ");
+	for (i = cn - 1; i >= 0; i--)
+		printf("%-3d", arr[i]);
+
+	// free(arr); // C
+	delete []arr; // C++
+	*/
+	
+	
+
+
+
+
+	
+	
 	
 	
 

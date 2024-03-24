@@ -1,0 +1,26 @@
+#pragma warning(disable : 4996)
+#include<stdio.h> // printf();, scanf();
+#include<string.h> // strcpy();
+#include<conio.h> // getch();
+
+#include<stdlib.h> // malloc();
+// or #include<malloc.h> //malloc();
+
+// #include<iostream.h> // ms 이외의 버전
+#include<iostream> // ms버전 -> cout, cin을 사용하기 위함(C언어의 printf(), scanf() 역할)
+using namespace std;
+
+
+void main
+{
+// malloc()
+	// malloc : heap에 공간을 할당할 때 사용하는 표준 함수
+	// #include<stdlib.h> 또는 #include<malloc.h> 를 사용해야함
+
+	// int *arr = (int *)malloc(sizeof(int) * cn); 	// C
+	// int *arr = new int[cn];				// C++
+	// 예시
+	// 만약 cn이 3일 경우
+	// malloc(4byte 곱하기 3) => malloc(12) => (int *)malloc(12) => 포인터로 만듦
+	// 컴파일러에 따라 int의 byte값이 달라서 sizeof(int)를 사용하여 그만큼의 메모리 공간을 heap에 할당하는 것임
+}

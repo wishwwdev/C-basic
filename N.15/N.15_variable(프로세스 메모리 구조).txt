@@ -1,0 +1,83 @@
+#pragma warning(disable : 4996)
+#include<stdio.h> // printf();, scanf();
+#include<string.h> // strcpy();
+#include<conio.h> // getch();
+
+#include<stdlib.h> // malloc();
+// or #include<malloc.h> //malloc();
+
+// #include<iostream.h> // ms 이외의 버전
+#include<iostream> // ms버전 -> cout, cin을 사용하기 위함(C언어의 printf(), scanf() 역할)
+using namespace std;
+
+void sub()
+{
+	static int s = 1;
+	auto a = 1;
+	printf("s = %d, a = %d\n", s, a);
+	s++;
+	a++;
+}
+
+void main
+{
+// Variable(프로세스 메모리 구조)
+	// 1.
+	/*
+	puts(" STATIC AUTO ");
+	sub();
+	sub();
+	sub();
+	*/
+
+	// 2.
+	/*
+	char *name = new char[10];
+	int *age = new int;
+
+	name = "홍길동"; 
+	// >> 오류
+	// 답 : strcpy(name, "홍길동");
+	// new는 heap영역에 메모리가 할당은 되지만 할당된 주소값을 참조하는 변수가 없음
+	// name이 heap영역에 할당된 메모리 주소값을 데이터로 가지지만 그 heap영역에 할당된 메모리를 참조하는 변수가 없음
+	// 그래서 strcpy()를 통해 그 메모리 안에 직접 값을 넣어줘야함
+
+	age = 20;
+	// >> 정상
+	*/
+	
+	// 3-1
+	// heap영역에 선언된 변수에 대해 delete
+	// 공간해지, 자원반납(메모리 공간이 사라지는 것이 아님)
+	// 공간을 해지해주므로써 컴퓨터가 메모리 공간을 효율적으로 사용할 수 있음
+	/*
+	char* name = new char[10];
+	int* age = new int;
+
+	delete []name, age;
+	*/
+	
+	// 3-2
+	// 자유변수 new를 통해 heap영역에 메모리 할당
+	// 포인터변수 arr의 공간을 미리 지정하지 않아도 됨(실시간으로 메모리 할당 가능)
+	// static(static), auto(stack)을 사용하면 공간을 지정하고 실행해야됨
+	/*
+	int cn, i;
+
+	printf("처리할 데이터 갯수 입력 : "); scanf("%d", &cn);
+
+	int *arr = new int[cn]; // new , class -> heap영역
+
+	// static int arr[cn];	// static영역
+	// int arr[cn];		// stack영역
+
+	for (i = 0; i < cn; i++)
+	{
+		printf("%d번째 정수 : ", i + 1); scanf("%d", &arr[i]);
+	}
+
+	printf("받은 정수 : ");
+	for (i = 0; i < cn; i++)
+		printf("%-3d", arr[i]);
+	*/
+}
