@@ -2,6 +2,7 @@
 #include<stdio.h> // printf();, scanf();
 #include<string.h> // strcpy();
 #include<conio.h> // getch();
+#include<time.h> // time_t 타입
 
 #include<stdlib.h> // malloc();
 // or #include<malloc.h> //malloc();
@@ -10,6 +11,11 @@
 #include<iostream> // ms버전 -> cout, cin을 사용하기 위함(C언어의 printf(), scanf() 역할)
 using namespace std;
 
+void sub(int a, int b) {
+	int sum;
+	sum = a + b;
+	printf("%d + %d = %d\n", a, b, sum);
+}
 
 
 void main()
@@ -1385,12 +1391,80 @@ void sub(int *a, int *b, int *sum)
 	// free(arr); // C
 	delete []arr; // C++
 	*/
+
+// N.16
+// Reference(참조자)
+	// 1.
+	/*
+	int x = 100;
+	int &chamjo_x = x;
+	int *pointer_x = &x;
+
+	chamjo_x += 1;				// >> 101
+	*pointer_x += 1;			// >> 102
+	 // pointer_x += 1; // >> 1000(주소값) + 4(int의 btye)
+	
+	printf("%d", x);			// >> 102
+	printf("%d", chamjo_x);		// >> 102
+	printf("%d", pointer_x);	// >> 1000
+
+	printf("%d", &x);			// >> 1000
+	printf("%d", &chamjo_x);	// >> 1000
+	printf("%d", &pointer_x);	// >> 2000
+	*/
+
+	// 2. 일반변수, 참조자, 포인터의 데이터 비교
+	/*
+	time_t start, end; // V/C++ 2010 ~ 2022
+	int i;
+	Data data;
+
+	start = time(0);
+	for (i = 0; i <= 3000000; i++)
+		pointer_func(&data);
+	end = time(0);
+	printf("포인터 인자 : %ld초\n", end - start);
+
+	start = time(0);
+	for (i = 0; i <= 3000000; i++)
+		reference_func(data);
+	end = time(0);
+	printf("참조 인자 : %ld초\n", end - start);
+
+	start = time(0);
+	for (i = 0; i <= 3000000; i++)
+		func(data);
+	end = time(0);
+	printf("보통 인자 : %ld초\n", end - start);
+	*/
+	
+	// 3.
+	/*
+	int sel;
+
+	printf("한 정수 입력(1 ~ 3) : "); scanf("%d", &sel);
+
+	Person& x = getinfo(sel);
+
+	printf("이름 : %s\n", x.name);
+	printf("나이 : %d\n", x.age);
+
+	Person s = man[2];	// 30000byte = 30000byte	=> 새로운 변수를 만듦
+	*/
+
+// exam1
+	// (1) Variable
+	/*
+	int a, b;
+
+	printf("첫번째 정수 : "); scanf("%d", &a);
+	printf("두번째 정수 : "); scanf("%d", &b);
+
+	sub(a, b);
+	*/
 	
 	
-
-
-
-
+	
 	
 	
 	
