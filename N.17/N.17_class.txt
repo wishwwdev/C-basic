@@ -1,0 +1,46 @@
+#pragma warning(disable : 4996)
+#include<stdio.h> // printf();, scanf();
+#include<string.h> // strcpy();
+#include<conio.h> // getch();
+
+#include<stdlib.h> // malloc();
+// or #include<malloc.h> //malloc();
+
+// #include<iostream.h> // ms 이외의 버전
+#include<iostream> // ms버전 -> cout, cin을 사용하기 위함(C언어의 printf(), scanf() 역할)
+using namespace std;
+
+
+class Nemo
+{
+private: int width, height;
+
+public:
+	Nemo() {}; // 디폴트 생성자 함수 : 공간만 만들어둘 때 필요
+	Nemo(int w, int h)
+	{
+		width = w;
+		height = h;
+	}
+	~Nemo() {}; // 소멸자 함수(~) : 함수를 없앨 때 필요
+
+	void output();
+	// 오버로딩 : 
+	// 함수명은 같으면서, 매개변수가 다르거나 반환타입이 달라야함
+	void output(int w, int h) {};
+};
+
+// '::' :  Nemo클래스안에 output()를 정의한다는 의미 
+void Nemo::output()
+{ 
+	printf("가로 : %d\n", width);
+	printf("세로 : %d\n", height);
+	printf("면젹 : %d\n", width * height);
+}
+
+void main
+{
+// Class
+	Nemo n(10, 20);
+	n.output();
+}

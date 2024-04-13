@@ -11,11 +11,9 @@
 #include<iostream> // ms버전 -> cout, cin을 사용하기 위함(C언어의 printf(), scanf() 역할)
 using namespace std;
 
-void sub(int a, int b) {
-	int sum;
-	sum = a + b;
-	printf("%d + %d = %d\n", a, b, sum);
-}
+
+
+
 
 
 void main()
@@ -1453,7 +1451,7 @@ void sub(int *a, int *b, int *sum)
 	*/
 
 // exam1
-	// (1) Variable
+	// 1-1. Variable
 	/*
 	int a, b;
 
@@ -1462,25 +1460,55 @@ void sub(int *a, int *b, int *sum)
 
 	sub(a, b);
 	*/
-	
-	
-	
-	
-	
-	
-	
 
-	
+	// 1-2. Pointer
+	/*
+	int a, b;
 
-	
-	
-	
-	
-	
+	printf("첫번째 정수 : "); scanf("%d", &a);
+	printf("두번째 정수 : "); scanf("%d", &b);
 
+	sub(&a, &b);
+	*/
 
+	// 1-3. Reference
+	/*
+	int a, b;
 
-	
+	printf("첫번째 정수 : "); scanf("%d", &a);
+	printf("두번째 정수 : "); scanf("%d", &b);
+
+	sub(a, b);
+	*/
+
+// N.17
+// Class
+	/*
+	Nemo n(10, 20);
+	n.output();
+	*/
+
+// exam1
+	// 2)
+	/*
+	Nemo nemo;
+	nemo.input();
+	nemo.output();
+	*/
+
+	// 3) - 한 클래스 안에 가로, 세로를 저장하는 배열변수를 만듦
+	/*
+	Nemo nemo;
+	nemo.input();
+	nemo.output();
+	*/
+
+	// 3) 강사님 - 각각의 클래스를 배열로 저장
+	/*
+	Nemo nemo[5]; // nemo는 포인터임 / 
+	nemo->input();
+	(*nemo).output();
+	*/
 	
 	
 }
