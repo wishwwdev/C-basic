@@ -11,9 +11,32 @@
 #include<iostream> // ms버전 -> cout, cin을 사용하기 위함(C언어의 printf(), scanf() 역할)
 using namespace std;
 
+// 6)
+/*
+class Person
+{
+private:
+	char name[10], blood[5];
+	int age;
 
+public:
+	Person() {};
+	Person(const char* name, int age, const char* blood)
+	{
+		strcpy(this->name, name);
+		this->age = age;
+		strcpy(this->blood, blood);
+	};
 
+	void output();
+};
 
+void Person::output()
+{
+	printf("이름   나이 혈액형\n");
+	printf("%3s %2d   %s", this->name, this->age, this->blood);
+};
+*/
 
 
 void main()
@@ -1508,6 +1531,41 @@ void sub(int *a, int *b, int *sum)
 	Nemo nemo[5]; // nemo는 포인터임 / 
 	nemo->input();
 	(*nemo).output();
+	*/
+
+// N.18
+	// 1)
+	/*
+	Style s("홍길동", 10, 20, 30);
+	s.output();
+	*/
+
+	// 2)
+	/*
+	Style s;
+	s.input();
+	s.output();
+	*/
+	
+	// 3)
+	/*
+	Style s[5];
+	s->input();
+	(*s).output();
+	*/
+	
+	// 4)
+	/*
+	Style s[5];
+	s->input();
+	s->orderDesc();
+	(*s).output();
+	*/
+	
+	// 5)
+	/*
+	Person p("홍길동", 20, "A");
+	p.output();
 	*/
 	
 	
