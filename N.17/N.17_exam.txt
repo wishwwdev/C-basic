@@ -64,8 +64,8 @@ void Nemo::input()
 {
 	for (int i = 0; i < 5; i++) {
 		printf("%d번째\n", i + 1);
-		printf("가로 입력 >> "); scanf("%d", &this->widthHeight[i][0]); // 정확한 표현은 &(*this).widthHeight[i][0]임
-		printf("세로 입력 >> "); scanf("%d", &this->widthHeight[i][1]);
+		printf("가로 입력 >> "); scanf("%d", &this->widthHeight[i][0]); 	// widthHeight가 배열이기 때문에 포인터라서 '화살표 연산자'사용
+		printf("세로 입력 >> "); scanf("%d", &this->widthHeight[i][1]);	// 정확한 표현은 &(*this).widthHeight[i][0]임
 	}
 	printf("\n");
 }
@@ -101,7 +101,7 @@ void Nemo::input()
 {
 	for (int i = 0; i < 5; i++) {
 		printf("%d번째\n", i + 1);
-		printf("가로 입력 >> "); scanf("%d", &this[i].width); // 정확한 표현은 &(*this).widthHeight[i][0]임
+		printf("가로 입력 >> "); scanf("%d", &this[i].width);
 		printf("세로 입력 >> "); scanf("%d", &this[i].height);
 	}
 	printf("\n");

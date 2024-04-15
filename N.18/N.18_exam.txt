@@ -1,0 +1,262 @@
+exam1
+class Style 정의
+	멤버 : 이름, 가슴, 허리, 힙
+	함수 : 생성자
+		input()
+		output()
+1) 초기화 -> 출력
+	Style s("홍길동", 10, 20, 30);
+2) 입,출력
+3) 데이터 : 5건(배열) -> 입,출력
+4) 힙을 기준으로 내림차순으로 출력
+5) class Person을 만들고 초기화 -> 출력
+
+---------------------------------------------------------------------------
+
+#pragma warning(disable : 4996)
+#include<stdio.h>
+#include<string.h> // strcpy();
+#include<conio.h>// getch();
+
+// 1)
+/*
+class Style
+{
+private:
+		char name[10];
+		int chest, waist, hip;
+
+public:
+
+	Style(const char* n, int c, int w, int h)
+	{
+		strcpy(this->name, n);
+		this->chest = c;
+		this->waist = w;
+		this->hip = h;
+	}
+
+	void output();
+};
+
+void Style::output()
+{
+	printf("이름 : %s\n", this->name);
+	printf("가슴 : %d\n", (*this).chest);
+	printf("허리 : %d\n", waist);
+	printf("힙 : %d\n", hip);
+}
+*/
+
+// 2)
+/*
+class Style
+{
+private:
+		char name[10];
+		int chest, waist, hip;
+
+public:
+	Style() {};
+	Style(const char* n, int c, int w, int h)
+	{
+		strcpy(name, n);
+		chest = c;
+		waist = w;
+		hip = h;
+	}
+	~Style() {};
+
+	void input();
+	void output();
+};
+
+void Style::input()
+{
+	printf("이름 입력 >> "); scanf("%s", name);
+	printf("가슴 입력 >> "); scanf("%d", &chest);
+	printf("허리 입력 >> "); scanf("%d", &this->waist);
+	printf("힙 입력 >> "); scanf("%d", &(*this).hip);
+}
+
+void Style::output()
+{
+	printf("이름 : %s\n", this->name);
+	printf("가슴 : %d\n", (*this).chest);
+	printf("허리 : %d\n", waist);
+	printf("힙 : %d\n", hip);
+}
+*/
+
+// 3)
+/*
+class Style
+{
+private:
+		char name[10];
+		int chest, waist, hip;
+
+public:
+	Style() {};
+	Style(const char* n, int c, int w, int h)
+	{
+		strcpy(name, n);
+		chest = c;
+		waist = w;
+		hip = h;
+	}
+	~Style() {};
+
+	void input();
+	void output();
+};
+
+void Style::input()
+{
+	for (int i = 0; i < 5; i++)
+	{
+		printf("이름 입력 >> "); scanf("%s", this[i].name);
+		printf("가슴 입력 >> "); scanf("%d", &this[i].chest);
+		printf("허리 입력 >> "); scanf("%d", &this[i].waist);
+		printf("힙 입력 >> "); scanf("%d", &this[i].hip);
+	}
+
+}
+
+void Style::output()
+{
+	for (int i = 0; i < 5; i++)
+	{
+		printf("이름 : %s\n", this[i].name);
+		printf("가슴 : %d\n", this[i].chest);
+		printf("허리 : %d\n", this[i].waist);
+		printf("힙 : %d\n", this[i].hip);
+	}
+}
+*/
+
+// 4)
+/*
+class Style
+{
+private:
+		char name[10];
+		int chest, waist, hip;
+
+public:
+	Style() {};
+	Style(const char* n, int c, int w, int h)
+	{
+		strcpy(name, n);
+		chest = c;
+		waist = w;
+		hip = h;
+	}
+	~Style() {};
+
+	void orderDesc();
+	void input();
+	void output();
+};
+
+void Style::input()
+{
+	for (int i = 0; i < 5; i++)
+	{
+		printf("이름 입력 >> "); scanf("%s", this[i].name);
+		printf("가슴 입력 >> "); scanf("%d", &this[i].chest);
+		printf("허리 입력 >> "); scanf("%d", &this[i].waist);
+		printf("힙 입력 >> "); scanf("%d", &this[i].hip);
+	}
+
+}
+
+void Style::output()
+{
+	for (int i = 0; i < 5; i++)
+	{
+		printf("이름 : %s\n", this[i].name);
+		printf("가슴 : %d\n", this[i].chest);
+		printf("허리 : %d\n", this[i].waist);
+		printf("힙 : %d\n", this[i].hip);
+	}
+}
+
+void Style::orderDesc()
+{
+	for (int i = 0; i < 4; i++)
+		for (int j = i+1; j < 5; j++)
+			if (this[i].hip < this[j].hip)
+			{
+				Style temp = this[i];
+				this[i] = this[j];
+				this[j] = temp;
+			}
+}
+*/
+
+// 5)
+/*
+class Person
+{
+private:
+	char name[10], blood[5];
+	int age;
+
+public:
+	Person() {};
+	Person(const char* name, int age, const char* blood)
+	{
+		strcpy(this->name, name);
+		this->age = age;
+		strcpy(this->blood, blood);
+	};
+
+	void output();
+};
+
+void Person::output()
+{
+	printf("이름   나이 혈액형\n");
+	printf("%3s %2d   %s", this->name, this->age, this->blood);
+};
+*/
+
+void main
+{
+// exam1
+	// 1)
+	/*
+	Style s("홍길동", 10, 20, 30);
+	s.output();
+	*/
+
+	// 2)
+	/*
+	Style s;
+	s.input();
+	s.output();
+	*/
+
+	// 3)
+	/*
+	Style s[5];
+	s->input();
+	(*s).output();
+	*/
+
+	// 4)
+	/*
+	Style s[5];
+	s->input();
+	s->orderDesc();
+	(*s).output();
+	*/
+	
+	// 5)
+	/*
+	Person p("홍길동", 20, "A");
+	p.output();
+	*/
+	
+}
